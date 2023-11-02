@@ -13,7 +13,7 @@ export const collection = [
   },
   {
     id: 3,
-    title: "The incredible HUlk the complete series",
+    title: "The incredible Hulk the complete series",
     image: "/images/hulk.jpg",
     year: 1977,
   },
