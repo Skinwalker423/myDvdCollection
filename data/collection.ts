@@ -1,4 +1,4 @@
-const collection = [
+export const collection = [
   {
     id: 1,
     title: "Lost Season 1",

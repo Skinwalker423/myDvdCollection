@@ -1,11 +1,4 @@
-interface MovieProps {
-  movie: {
-    id: number;
-    title: string;
-    image: string;
-    year: number;
-  };
-}
+import { MovieProps } from "../../types";
 
 const MovieCard = ({ movie }: MovieProps) => {
   return (
