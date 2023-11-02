@@ -26,7 +26,9 @@ function App() {
 
   return (
     <main className='w-full'>
-      <header>My DVD Collection</header>
+      <header className='text-center my-10'>
+        <h1 className='text-7xl'>My DVD Collection</h1>
+      </header>
       <section className='py-10 px-16 w-full flex justify-center'>
         <input
           onChange={(e) => {
@@ -40,7 +42,7 @@ function App() {
           placeholder='Find Dvd'
         />
       </section>
-      <section>
+      <section className='pb-10'>
         <ul className='flex flex-wrap gap-5 justify-center'>
           {movieList.map((movie: Movie) => {
             return (
