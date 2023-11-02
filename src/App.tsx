@@ -9,10 +9,12 @@ function App() {
     <main>
       <header>My DVD Collection</header>
       <section>
-        <ul className='flex flex-wrap gap-3'>
+        <ul className='flex flex-wrap gap-5 justify-center py-5'>
           {collection.map((movie: Movie) => {
             return (
-              <MovieCard key={movie.id} movie={movie} />
+              <li className=''>
+                <MovieCard key={movie.id} movie={movie} />
+              </li>
             );
           })}
         </ul>
