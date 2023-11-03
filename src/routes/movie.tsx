@@ -12,30 +12,35 @@ const Movie = () => {
 
   if (!foundMovie) return "No such movie";
 
+  const img =
+    foundMovie.image === ""
+      ? "/images/defaultImg.png"
+      : foundMovie.image;
+
   let location = "";
   if (foundMovie.id < 19) {
     location = `First row, ${foundMovie.id} going in from the left`;
   } else if (foundMovie.id < 46) {
     location = `Second row, ${
-      foundMovie.id - 18
+      foundMovie.id - 19
     } going in from the left`;
   } else if (foundMovie.id < 81) {
     location = `Thrid row, ${
-      foundMovie.id - 45
+      foundMovie.id - 46
     } going in from the left`;
   } else if (foundMovie.id < 121) {
     location = `Fourth row, ${
-      foundMovie.id - 80
+      foundMovie.id - 81
     } going in from the left`;
   } else if (foundMovie.id < 157) {
     location = `Second row, ${
-      foundMovie.id - 120
+      foundMovie.id - 121
     } going in from the left`;
   }
   return (
     <main className='flex justify-center gap-5'>
       <img
-        src={foundMovie.image}
+        src={img}
         alt={foundMovie.title}
         width={500}
         height={500}
