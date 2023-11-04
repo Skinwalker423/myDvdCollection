@@ -26,15 +26,15 @@ const Movie = () => {
     } going in from the left`;
   } else if (foundMovie.id < 81) {
     location = `Thrid row, ${
-      foundMovie.id - 46
+      foundMovie.id - 45
     } going in from the left`;
   } else if (foundMovie.id < 121) {
     location = `Fourth row, ${
-      foundMovie.id - 81
+      foundMovie.id - 80
     } going in from the left`;
   } else if (foundMovie.id < 157) {
     location = `Second row, ${
-      foundMovie.id - 121
+      foundMovie.id - 120
     } going in from the left`;
   }
   return (
