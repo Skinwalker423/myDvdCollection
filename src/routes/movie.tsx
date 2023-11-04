@@ -32,7 +32,7 @@ const Movie = () => {
     location = `Fourth row, ${
       foundMovie.id - 80
     } going in from the left`;
-  } else if (foundMovie.id < 159) {
+  } else if (foundMovie.id < 161) {
     location = `Last row, ${
       foundMovie.id - 120
     } going in from the left`;

@@ -5,8 +5,38 @@ import MovieCard from "./components/MovieCard.tsx";
 import { useEffect, useState } from "react";
 
 function App() {
+  const moviesPerPage = 15;
+  const collectionLength = collection.length;
+  const pages = Math.floor(
+    collectionLength / moviesPerPage
+  );
+
   const [movieList, setMovieList] = useState(collection);
   const [value, setValue] = useState("");
+  const [paginatedList, setPaginatedList] = useState<
+    (Movie | undefined)[]
+  >([]);
+
+  const [pagStart, setPagStart] = useState(0);
+  const [pagEnd, setPagEnd] = useState(moviesPerPage);
+
+  const updatePaginatedList = (
+    start: number,
+    end: number
+  ) => {
+    if (!collection.length) return;
+    const pagList = collection.map((movie: Movie, i) => {
+      if (i <= start && i > end) return;
+      return movie;
+    });
+    if (!pagList.length) return;
+    setPaginatedList(pagList);
+    return pagList;
+  };
+
+  useEffect(() => {
+    updatePaginatedList(pagStart, pagEnd);
+  }, []);
 
   useEffect(() => {
     if (!value.length) {
