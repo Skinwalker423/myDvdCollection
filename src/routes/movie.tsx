@@ -32,10 +32,12 @@ const Movie = () => {
     location = `Fourth row, ${
       foundMovie.id - 80
     } going in from the left`;
-  } else if (foundMovie.id < 157) {
+  } else if (foundMovie.id < 159) {
     location = `Second row, ${
       foundMovie.id - 120
     } going in from the left`;
+  } else {
+    location = "Not found";
   }
   return (
     <main className='flex justify-center gap-5'>
