@@ -46,12 +46,7 @@ function App() {
         <ul className='flex flex-col gap-5 justify-center w-full items-center'>
           {movieList.map((movie: Movie) => {
             return (
-              <li
-                className='w-full h-full max-w-6xl hover:scale-105 transition-transform rounded-lg py-4 px-2 bg-slate-200'
-                key={movie.id}
-              >
-                <MovieCard movie={movie} />
-              </li>
+              <MovieCard key={movie.id} movie={movie} />
             );
           })}
         </ul>

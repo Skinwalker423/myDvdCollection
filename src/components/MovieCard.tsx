@@ -8,7 +8,9 @@ const MovieCard = ({ movie }: MovieProps) => {
       : movie.image;
 
   return (
-    <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
+    <li className='w-full h-full max-w-6xl hover:scale-105 transition-transform rounded-lg py-4 px-2 bg-slate-200'>
+      <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
+    </li>
   );
 };
 
