@@ -53,7 +53,7 @@ function App() {
   return (
     <main className='w-full'>
       <header className='text-center my-10'>
-        <h1 className='text-7xl'>My DVD Collection</h1>
+        <h1 className='text-3xl'>My DVD Collection</h1>
       </header>
       <section className='px-5 w-full flex justify-center items-center flex-col gap-3'>
         <div className='w-full relative max-w-3xl'>
@@ -92,7 +92,7 @@ function App() {
           </button>
         </div>
       </section>
-      <section className='pb-10'>
+      <section className='pb-10 px-2'>
         {movieList.length > 0 ? (
           <ul className='flex flex-col gap-5 justify-center w-full items-center'>
             {movieList.map((movie: Movie) => {
@@ -102,7 +102,7 @@ function App() {
             })}
           </ul>
         ) : (
-          <p>No results</p>
+          <p className='text-center'>No results</p>
         )}
       </section>
     </main>
