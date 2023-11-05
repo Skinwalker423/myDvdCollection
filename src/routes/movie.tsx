@@ -40,14 +40,22 @@ const Movie = () => {
     location = "Not found";
   }
   return (
-    <main className='h-screen w-full flex justify-start items-center flex-col max-sm:gap-0 gap-10 mt-5'>
+    <main className='h-screen w-full flex justify-start items-center flex-col max-sm:gap-3 gap-10 mt-5'>
       <h1 className='text-6xl text-center text-red-600 text-clip'>
         {foundMovie?.title}
       </h1>
       <div className='flex justify-center items-center max-sm:gap-0 gap-5 shadow-lg max-sm:flex-col'>
-        <section className='h-full w-full flex flex-col justify-center max-sm:gap-3 gap-10 px-3'>
-          <p className='text-lg'>Year: {foundMovie.year}</p>
-          <p className='text-lg'>found: {location}</p>
+        <section className='h-full w-full flex flex-col justify-center max-sm:gap-3 gap-10 px-3 py-5'>
+          <p className='text-lg'>
+            <span className='text-xl font-bold'>Year:</span>{" "}
+            {foundMovie.year}
+          </p>
+          <p className='text-lg'>
+            <span className='text-xl font-bold'>
+              Location:
+            </span>{" "}
+            {location}
+          </p>
           <Link
             to={"/"}
             className='py-2 px-4 bg-blue-500 rounded-md w-fit hover:bg-blue-400 text-white'
