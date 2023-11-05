@@ -4,13 +4,22 @@ import { Movie } from "../types/index.ts";
 import MovieCard from "./components/MovieCard.tsx";
 import { useEffect, useState } from "react";
 
+const titleSortedList = collection.sort((a, b) => {
+  if (a.title < b.title) {
+    return -1;
+  } else if (a.title > b.title) {
+    return 1;
+  } else return 0;
+});
+
 function App() {
-  const [movieList, setMovieList] = useState(collection);
+  const [movieList, setMovieList] =
+    useState(titleSortedList);
   const [value, setValue] = useState("");
 
   useEffect(() => {
     if (!value.length) {
-      setMovieList(collection);
+      setMovieList(titleSortedList);
     } else {
       const filteredList = collection.filter(
         (movie: Movie) => {
