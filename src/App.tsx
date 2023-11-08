@@ -51,22 +51,20 @@ function App() {
   };
 
   return (
-    <main className='w-full'>
-      <header className='text-center my-10'>
+    <main className='w-full relative'>
+      <header className='w-full flex flex-col text-center pt-3 justify-center items-center gap-3 fixed bg-slate-400 z-50'>
         <h1 className='text-3xl'>My DVD Collection</h1>
-      </header>
-      <section className='px-5 w-full flex justify-center items-center flex-col gap-3'>
-        <div className='w-full relative max-w-3xl'>
+        <div className='w-full relative max-w-3xl px-2'>
           <input
             onChange={(e) => {
               setValue(e.target.value);
             }}
             value={value}
-            className='px-4 py-4 w-full border max-w-3xl'
+            className='px-4 py-4 w-full border border-slate-300 max-w-3xl rounded-full'
             type='search'
             name='search'
             id='search'
-            placeholder='Find Dvd'
+            placeholder='Search for a dvd'
           />
           <button
             onClick={() => setValue("")}
@@ -91,8 +89,8 @@ function App() {
             Sort by Title
           </button>
         </div>
-      </section>
-      <section className='pb-10 px-2'>
+      </header>
+      <section className='pb-10 px-2 pt-60'>
         {movieList.length > 0 ? (
           <ul className='flex flex-col gap-5 justify-center w-full items-center'>
             {movieList.map((movie: Movie) => {
